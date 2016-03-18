@@ -1,0 +1,9 @@
+<div class="well" ng-show="chosenFields.length">
+  <ul class="list-unstyled">
+    <li ng-repeat="field in chosenFields = (second.fields | filter:{selected: true})">
+      {{field.name}}<sup ng-show="field.required">*</sup> : <field field="field"></field>
+    </li>
+  </ul>
+</div>
+
+<h3 ng-show="!chosenFields.length">Choose any field at the first tab, please</h3>

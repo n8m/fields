@@ -1,0 +1,18 @@
+<div class="fields-container">
+	<div ng-if="field.type==='text'">
+		<input type="text" ng-model="field.value" class="form-control" ng-required="field.required">
+	</div>
+
+	<div ng-if="field.type==='number'">
+		<input type="number" ng-model="field.value" class="form-control" ng-required="field.required">
+	</div>
+
+	<div ng-if="field.type==='date'">
+		<input type="text" bs-datepicker ng-model="field.value" class="form-control" ng-required="field.required">
+	</div>
+
+	<div ng-if="field.type==='select'">
+		<select class="form-control" ng-options="value.value as value.title for value in field.values" ng-model="field.value">
+		</select>
+	</div>
+</div>

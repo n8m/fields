@@ -1,0 +1,11 @@
+<div class="well">
+
+	<label>Filter: <input type="text" ng-model="filter"></label>
+
+	<div ng-repeat="item in first.fields | filter: filter">
+		<label>
+			<input type="checkbox" ng-model="item.selected">
+			{{item.name}}
+		</label>
+	</div>
+</div>
